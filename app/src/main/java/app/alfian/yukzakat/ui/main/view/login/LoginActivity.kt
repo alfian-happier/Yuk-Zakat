@@ -7,6 +7,7 @@ import app.alfian.yukzakat.data.usecase.LoginUseCase
 import app.alfian.yukzakat.databinding.ActivityLoginBinding
 import app.alfian.yukzakat.ui.base.BaseActivity
 import app.alfian.yukzakat.ui.main.view.home.HomeActivity
+import app.alfian.yukzakat.util.changeActivity
 import app.alfian.yukzakat.util.goToActivity
 import app.alfian.yukzakat.util.toast
 import javax.inject.Inject
@@ -31,7 +32,7 @@ class LoginActivity : BaseActivity() {
             when(it){
                 is LoginUseCase.LoginResult.Success -> {
                     SharedSession.user = it.response
-                    goToActivity(HomeActivity())
+                    changeActivity(HomeActivity())
                 }
                 is LoginUseCase.LoginResult.Failure -> {
                     it.error.localizedMessage?.let { error -> toast(error) }
