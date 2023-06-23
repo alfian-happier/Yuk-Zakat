@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="vm"
+            type="app.alfian.yukzakat.ui.main.view.home.dashboard.DashboardVM" />
+        <import type="app.alfian.yukzakat.SharedSession" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/helloDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/buttonProfilePict"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                app:cardElevation="4dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardCornerRadius="12dp"
+                app:cardUseCompatPadding="true">
+
+                <ImageView
+                    android:id="@+id/profilePict"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_pict"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@{SharedSession.INSTANCE.user != null ? `Assalamualaikum,\n` + SharedSession.INSTANCE.user.fullname : ``}"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/bannerDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/banner_ayo_qurban"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/helloDashboard"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide1Dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent=".5"
+            android:orientation="vertical"/>
+
+        <ImageView
+            android:id="@+id/bannerZakatPenghasilanDashboard"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent=".5"
+            android:layout_height="85dp"
+            android:src="@drawable/banner_zakat_penghasilan"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> vm.onZakatPenghasilanClicked()}"
+            app:layout_constraintTop_toBottomOf="@id/bannerDashboard"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/guide1Dashboard"/>
+
+        <ImageView
+            android:id="@+id/bannerCalculatorDashboard"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent=".5"
+            android:layout_height="85dp"
+            android:src="@drawable/banner_calculator"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> vm.onCalculatorClicked()}"
+            app:layout_constraintTop_toBottomOf="@id/bannerDashboard"
+            app:layout_constraintLeft_toLeftOf="@id/guide1Dashboard"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/textAgendaKegiatanDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agenda Kegiatan"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/bannerZakatPenghasilanDashboard"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            app:layout_constraintTop_toBottomOf="@id/textAgendaKegiatanDashboard"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/banner_pengajian_bulanan"
+                    android:scaleType="centerInside"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/banner_pengajian_bulanan"
+                    android:scaleType="centerInside"/>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/banner_pengajian_bulanan"
+                    android:scaleType="centerInside"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

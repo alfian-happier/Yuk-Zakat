@@ -1,0 +1,125 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "app.alfian.yukzakat"
+        minSdk 23
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+
+            buildConfigField 'String', 'ENCRYPT_KEY', '"my_super_secret_key"'
+            buildConfigField 'String', 'ENCRYPT_SALT', '"ssshhhhhhhhhhh!!!!"'
+
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    def formattedDate = new Date().format('yyyyMMdd')
+                    outputFileName = "YukZakat-${variant.name}-${variant.versionName}-${variant.flavorName}-${formattedDate}.apk"
+                }
+            }
+        }
+        release {
+            minifyEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', 'ENCRYPT_KEY', '"my_super_secret_key"'
+            buildConfigField 'String', 'ENCRYPT_SALT', '"ssshhhhhhhhhhh!!!!"'
+
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    def formattedDate = new Date().format('yyyyMMdd')
+                    outputFileName = "YukZakat-${variant.name}-${variant.versionName}-${variant.flavorName}-${formattedDate}.apk"
+                }
+            }
+        }
+    }
+
+    compileOptions {
+        encoding "UTF-8"
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    dataBinding {
+        enabled true
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+    // Dagger dependencies
+    implementation 'com.google.dagger:dagger-android:2.46.1'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.6.1'
+    kapt 'com.google.dagger:dagger-android-processor:2.46.1'
+    kapt 'com.google.dagger:dagger-compiler:2.46.1'
+
+    // KPermissions dependencies
+    implementation 'com.github.fondesa:kpermissions:3.4.0'
+    implementation 'com.github.fondesa:kpermissions-rx2:3.4.0'
+
+    // Rx dependencies
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
+
+    // LiveData dependencies
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+
+    // Firebase dependencies
+    implementation platform('com.google.firebase:firebase-bom:32.1.0')
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+
+    // Gson dependencies
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    // Android Image Cropper dependencies
+    implementation 'com.vanniktech:android-image-cropper:4.5.0'
+
+    // Compressor dependencies
+    implementation 'id.zelory:compressor:3.0.1'
+
+    // Zoomage dependencies
+    implementation 'com.jsibbold:zoomage:1.3.1'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

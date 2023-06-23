@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="vm"
+            type="app.alfian.yukzakat.ui.main.view.home.zakat.ZakatVM" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textPilihZakat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih Zakat"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageView
+            android:id="@+id/buttonPenghasilan"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/button_zakat_penghasilan"
+            app:layout_constraintTop_toBottomOf="@+id/textPilihZakat"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> vm.onZakatPenghasilanClicked()}"/>
+
+        <ImageView
+            android:id="@+id/buttonFitrah"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/button_zakat_fitrah"
+            app:layout_constraintTop_toBottomOf="@id/buttonPenghasilan"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> vm.onZakatFitrahClicked()}"/>
+
+        <ImageView
+            android:id="@+id/buttonMaal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/button_zakat_maal"
+            app:layout_constraintTop_toBottomOf="@id/buttonFitrah"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> vm.onZakatMaalClicked()}"/>
+
+        <ImageView
+            android:id="@+id/buttonShodaqoh"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/button_shodaqoh"
+            app:layout_constraintTop_toBottomOf="@id/buttonMaal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> vm.onShodaqohClicked()}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
