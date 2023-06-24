@@ -53,11 +53,11 @@ fun TextInputEditText.addRupiahFormatter() {
                 val parsed = if (cleanString.isBlank()) 0.0 else cleanString.toDouble()
 
                 val localeID = Locale("in","ID")
-                val formatted = NumberFormat.getCurrencyInstance(localeID).format(parsed / 100)
-
-                current = formatted
-                this@addRupiahFormatter.setText(formatted)
-                this@addRupiahFormatter.setSelection(formatted.length)
+                val formatted = NumberFormat.getCurrencyInstance(localeID).format(parsed)
+                val clean = formatted.substring(0,formatted.indexOf(","))
+                current = clean
+                this@addRupiahFormatter.setText(clean)
+                this@addRupiahFormatter.setSelection(clean.length)
 
                 this@addRupiahFormatter.addTextChangedListener(this)
             }
@@ -68,9 +68,8 @@ fun TextInputEditText.addRupiahFormatter() {
 
 fun String.isMoreEqualsThan(minimal : String) : Boolean {
     val cleanMinimal = minimal.replace(".","").toDouble()
-    val clean = this.substring(0,this.indexOf(","))
-    val veryClean = clean.replace("Rp","").replace(".","").toDouble()
-    return veryClean >= cleanMinimal
+    val clean = this.replace("Rp","").replace(".","").toDouble()
+    return clean >= cleanMinimal
 }
 
 fun String?.copyString(context: Context) {
@@ -125,12 +124,13 @@ fun Date.toStringDate() : String {
 
 fun Double.toRupiahFormat() : String {
     val localeID = Locale("in","ID")
-    return NumberFormat.getCurrencyInstance(localeID).format(this )
+    val formatted = NumberFormat.getCurrencyInstance(localeID).format(this )
+    return formatted.substring(0,formatted.indexOf(","))
 }
 
 fun String.getCleanDoubleOrNull() : Double? {
     val removedRp = this.substring(2,this.length)
-    val doubleString = removedRp.replace(".","").replace(",",".")
+    val doubleString = removedRp.replace(".","")
     return doubleString.toDoubleOrNull()
 }
 
