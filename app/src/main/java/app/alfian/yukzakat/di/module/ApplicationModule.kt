@@ -8,7 +8,7 @@ import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Singleton
 
 /**
- * Created by Zharfan on 6/13/2023.
+ * Created by Alfian on 6/13/2023.
  */
 
 @Module

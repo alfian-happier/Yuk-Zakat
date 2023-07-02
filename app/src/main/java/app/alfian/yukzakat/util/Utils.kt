@@ -23,7 +23,7 @@ import java.util.Date
 import java.util.Locale
 
 /**
- * Created by Zharfan on 6/13/2023.
+ * Created by Alfian on 6/13/2023.
  */
 
 fun Context.toast(text: String?) {

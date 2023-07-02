@@ -7,7 +7,7 @@ import app.alfian.yukzakat.ui.base.BaseVM
 import javax.inject.Inject
 
 /**
- * Created by Zharfan on 6/22/2023.
+ * Created by Alfian on 6/22/2023.
  */
 
 class DetailTransactionVM @Inject constructor(val activity: BaseActivity) : BaseVM() {

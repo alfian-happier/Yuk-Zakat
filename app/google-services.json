@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "575350475651",
-    "project_id": "yuk-zakat",
-    "storage_bucket": "yuk-zakat.appspot.com"
+    "project_number": "561883550983",
+    "project_id": "yuk-zakat-e6552",
+    "storage_bucket": "yuk-zakat-e6552.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:575350475651:android:b97fadf4c96bffff5d84b6",
+        "mobilesdk_app_id": "1:561883550983:android:ee3e49f374cfc19a58a1a2",
         "android_client_info": {
           "package_name": "app.alfian.yukzakat"
         }
       },
       "oauth_client": [
         {
-          "client_id": "575350475651-9jg4errik8ct9u86vkdj5iesebte9fvi.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "app.alfian.yukzakat",
-            "certificate_hash": "0586d980ac60d8b0426938d71a8ea1108c2e926f"
-          }
-        },
-        {
-          "client_id": "575350475651-irh9otmhh8ugvblm04d736kf8arj9ppn.apps.googleusercontent.com",
+          "client_id": "561883550983-mn9i4qg0pbdvbs46ad8fm9nl2vvv11d6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBEjsgGvFRZKRTezbs86A2r3rydVNjpuPQ"
+          "current_key": "AIzaSyBk51c3cAmXQqFxilfnq44NyVedt41ictE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "575350475651-irh9otmhh8ugvblm04d736kf8arj9ppn.apps.googleusercontent.com",
+              "client_id": "561883550983-mn9i4qg0pbdvbs46ad8fm9nl2vvv11d6.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

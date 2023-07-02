@@ -10,7 +10,7 @@ import app.alfian.yukzakat.util.loadFromBase64
 import javax.inject.Inject
 
 /**
- * Created by Zharfan on 6/22/2023.
+ * Created by Alfian on 6/22/2023.
  */
 
 class DetailTransactionActivity : BaseActivity() {

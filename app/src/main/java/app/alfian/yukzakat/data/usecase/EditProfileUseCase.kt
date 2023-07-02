@@ -5,7 +5,7 @@ import app.alfian.yukzakat.data.repo.UserRepo
 import io.reactivex.Observable
 
 /**
- * Created by Zharfan on 6/21/2023.
+ * Created by Alfian on 6/21/2023.
  */
 
 class EditProfileUseCase (private val userRepo: UserRepo) {

@@ -13,7 +13,7 @@ import app.alfian.yukzakat.util.toast
 import javax.inject.Inject
 
 /**
- * Created by Zharfan on 6/13/2023.
+ * Created by Alfian on 6/13/2023.
  */
 
 class LoginActivity : BaseActivity() {

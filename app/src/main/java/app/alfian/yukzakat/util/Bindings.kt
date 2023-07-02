@@ -4,7 +4,7 @@ import android.view.View
 import androidx.databinding.BindingAdapter
 
 /**
- * Created by Zharfan on 6/13/2023.
+ * Created by Alfian on 6/13/2023.
  */
 
 @BindingAdapter("android:layout_height")

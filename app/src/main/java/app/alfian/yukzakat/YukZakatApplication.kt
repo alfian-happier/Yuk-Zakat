@@ -7,7 +7,7 @@ import app.alfian.yukzakat.di.module.ApplicationModule
 import app.alfian.yukzakat.di.module.RepositoryModule
 
 /**
- * Created by Zharfan on 6/13/2023.
+ * Created by Alfian on 6/13/2023.
  */
 
 class YukZakatApplication : Application() {

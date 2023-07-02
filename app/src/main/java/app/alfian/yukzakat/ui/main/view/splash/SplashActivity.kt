@@ -12,7 +12,7 @@ import app.alfian.yukzakat.util.isNotNull
 import javax.inject.Inject
 
 /**
- * Created by Zharfan on 6/13/2023.
+ * Created by Alfian on 6/13/2023.
  */
 
 @SuppressLint("CustomSplashScreen")

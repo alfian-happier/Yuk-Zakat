@@ -35,7 +35,7 @@ import kotlinx.coroutines.launch
 import java.io.File
 
 /**
- * Created by Zharfan on 6/13/2023.
+ * Created by Alfian on 6/13/2023.
  */
 
 abstract class BaseActivity : AppCompatActivity(),PermissionListener,ImagePickerListener{

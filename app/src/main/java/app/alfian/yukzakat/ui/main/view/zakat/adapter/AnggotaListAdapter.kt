@@ -9,7 +9,7 @@ import app.alfian.yukzakat.data.model.Anggota
 import app.alfian.yukzakat.databinding.ItemAnggotaListBinding
 
 /**
- * Created by Zharfan on 6/23/2023.
+ * Created by Alfian on 6/23/2023.
  */
 
 class AnggotaListAdapter(private val anggotaList : ArrayList<Anggota>,

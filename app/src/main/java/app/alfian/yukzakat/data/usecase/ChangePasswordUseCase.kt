@@ -4,7 +4,7 @@ import app.alfian.yukzakat.data.repo.UserRepo
 import io.reactivex.Observable
 
 /**
- * Created by Zharfan on 6/22/2023.
+ * Created by Alfian on 6/22/2023.
  */
 class ChangePasswordUseCase (private val userRepo: UserRepo) {
 

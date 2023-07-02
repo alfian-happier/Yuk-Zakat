@@ -13,7 +13,7 @@ import javax.crypto.spec.PBEKeySpec
 import javax.crypto.spec.SecretKeySpec
 
 /**
- * Created by Zharfan on 6/14/2023.
+ * Created by Alfian on 6/14/2023.
  */
 
 fun encrypt(strToEncrypt: String): String? {

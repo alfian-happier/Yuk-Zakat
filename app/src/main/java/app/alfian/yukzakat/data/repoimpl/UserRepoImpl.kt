@@ -11,7 +11,7 @@ import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 
 /**
- * Created by Zharfan on 6/13/2023.
+ * Created by Alfian on 6/13/2023.
  */
 
 class UserRepoImpl(val activity : BaseActivity) : UserRepo {

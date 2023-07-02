@@ -14,7 +14,7 @@ import app.alfian.yukzakat.databinding.DialogImageViewerBinding
 import app.alfian.yukzakat.util.loadFromBase64
 
 /**
- * Created by Zharfan on 6/23/2023.
+ * Created by Alfian on 6/23/2023.
  */
 
 class ImageViewerDialog(val ctx : Context) : Dialog(ctx) {
