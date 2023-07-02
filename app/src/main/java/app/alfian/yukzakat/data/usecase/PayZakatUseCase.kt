@@ -6,7 +6,7 @@ import app.alfian.yukzakat.data.repo.ZakatRepo
 import io.reactivex.Observable
 
 /**
- * Created by Zharfan on 6/13/2023.
+ * Created by Alfian on 6/13/2023.
  */
 
 class PayZakatUseCase (private val zakatRepo: ZakatRepo) {

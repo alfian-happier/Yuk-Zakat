@@ -11,7 +11,7 @@ import app.alfian.yukzakat.util.toast
 import javax.inject.Inject
 
 /**
- * Created by Zharfan on 6/22/2023.
+ * Created by Alfian on 6/22/2023.
  */
 
 class ChangePasswordActivity : BaseActivity(){

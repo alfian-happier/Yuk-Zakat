@@ -6,7 +6,7 @@ import app.alfian.yukzakat.data.model.User
 import com.google.gson.Gson
 
 /**
- * Created by Zharfan on 6/13/2023.
+ * Created by Alfian on 6/13/2023.
  */
 
 object SharedSession {

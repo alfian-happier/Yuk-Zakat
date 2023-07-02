@@ -10,7 +10,7 @@ import app.alfian.yukzakat.R
 import app.alfian.yukzakat.data.model.Zakat
 
 /**
- * Created by Zharfan on 6/22/2023.
+ * Created by Alfian on 6/22/2023.
  */
 
 class HistoryListAdapter(private val items : List<Zakat>,
